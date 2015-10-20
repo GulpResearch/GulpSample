@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 
 gulp.task('default', function() {
@@ -5,6 +7,11 @@ gulp.task('default', function() {
 });
 
 gulp.task('copy', function() {
-  return gulp.src('app/index.html')
+  var paths = [
+    'app/**/*.html',
+    'app/**/*.js',
+    'app/**/*.css'
+  ];
+  return gulp.src(paths)
              .pipe(gulp.dest('dist/'));
 });
