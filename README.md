@@ -23,7 +23,16 @@ Gulpをlocalにinstallしていなかった。
 ~~~
 $ npm install --save-dev gulp
 ~~~
-成
+成功。
+
 ## copy
 
-`/app/*` -> `/dist/`
+`/app/*` -> `/dist/`　OK
+
+igunore.htmlはコピーしない。　OK
+
+## browserSync
+
+serve: serverを起動し、変更を監視。　OK
+server: サーバー機能　OK
+reload: 再読み込み OK
