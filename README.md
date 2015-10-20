@@ -23,4 +23,7 @@ Gulpをlocalにinstallしていなかった。
 ~~~
 $ npm install --save-dev gulp
 ~~~
-成功。
+成
+## copy
+
+`/app/*` -> `/dist/`
