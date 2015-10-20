@@ -1,0 +1,25 @@
+{
+  "name": "gulpsample",
+  "version": "1.0.0",
+  "description": "gulp challenge!",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KadoTomohiro/GulpSample.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Kado Tomohiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KadoTomohiro/GulpSample/issues"
+  },
+  "homepage": "https://github.com/KadoTomohiro/GulpSample#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
