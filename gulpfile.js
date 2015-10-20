@@ -10,7 +10,8 @@ gulp.task('copy', function() {
   var paths = [
     'app/**/*.html',
     'app/**/*.js',
-    'app/**/*.css'
+    'app/**/*.css',
+    '!app/igunore.html'
   ];
   return gulp.src(paths)
              .pipe(gulp.dest('dist/'));
