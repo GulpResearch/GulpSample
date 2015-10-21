@@ -21,6 +21,7 @@
   "homepage": "https://github.com/KadoTomohiro/GulpSample#readme",
   "devDependencies": {
     "browser-sync": "^2.9.11",
+    "del": "^2.0.2",
     "gulp": "^3.9.0"
   }
 }

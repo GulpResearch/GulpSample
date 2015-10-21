@@ -27,12 +27,19 @@ $ npm install --save-dev gulp
 
 ## copy
 
-`/app/*` -> `/dist/`　OK
+コピー前にdistをクリア　　OK
+
+ファイル削除は`del`moduleが推奨されているらしい。
+[参考](https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md)
+
+`./app/*` -> `./dist/`　OK
 
 igunore.htmlはコピーしない。　OK
 
 ## browserSync
 
 serve: serverを起動し、変更を監視。　OK
+
 server: サーバー機能　OK
+
 reload: 再読み込み OK

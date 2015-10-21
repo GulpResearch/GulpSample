@@ -2,13 +2,16 @@
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
+var del = require('del');
 
-var paths = [
+var paths = {
+  app:[
   'app/**/*.html',
   'app/**/*.js',
   'app/**/*.css',
   '!app/igunore.html'
-];
+],
+dist: './dist/'};
 
 // gulpの動作確認
 gulp.task('default', function() {
@@ -17,14 +20,15 @@ gulp.task('default', function() {
 
 // app -> dist コピー
 gulp.task('copy', function() {
-  return gulp.src(paths)
-    .pipe(gulp.dest('dist/'));
+  gulp.run('clean:dist');
+  return gulp.src(paths.app)
+    .pipe(gulp.dest(paths.dist));
 });
 
 // サーバー起動と変更監視
 gulp.task('serve', function() {
   gulp.run('server');
-  gulp.watch(paths, ['reload']);
+  gulp.watch(paths.app, ['reload']);
 });
 
 // サーバー機能
@@ -40,4 +44,8 @@ gulp.task('server', function() {
 gulp.task('reload', function() {
   gulp.src(paths)
     .pipe(browserSync.reload());
+});
+
+gulp.task('clean:dist', function() {
+  return del(paths.dist + '**/*');
 });
