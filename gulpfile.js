@@ -47,5 +47,5 @@ gulp.task('reload', function() {
 });
 
 gulp.task('clean:dist', function() {
-  return del(paths.dist + '**/*');
+  return del(paths.dist);
 });
