@@ -19,8 +19,7 @@ gulp.task('default', function() {
 });
 
 // app -> dist コピー
-gulp.task('copy', function() {
-  gulp.run('clean:dist');
+gulp.task('copy', ['clean:dist'], function() {
   return gulp.src(paths.app)
     .pipe(gulp.dest(paths.dist));
 });
